@@ -3,40 +3,41 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-inquirer
-.createPromptModule([
+const questions = () =>
+inquirer.prompt([
 {
     type: 'input', 
     questionName: 'title',
     message: 'What is the title?',
-    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    type: 'input', 
+    questionName: 'description',
+    message: 'Please describe your application.',
 },
 {
     type: 'input', 
     questionName: 'installation',
     message: 'How do you install your app?',
-    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
 },
 {
     type: 'input', 
-    questionName: 'instructions',
-    message: 'What instructions must you follow?',
-    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
-},
-{
-    type: 'input', 
-    questionName: 'credits',
-    message: 'Do you have any credits?',
-    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+    questionName: 'usage',
+    message: 'How do you use your app?',
 },
 {
     type: 'input', 
     questionName: 'credits',
     message: 'Do you have any credits?',
-    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    //list of licenses to choose from
+    type: 'list', 
+    questionName: 'License',
+    message: 'What license did you use?',
+    choices: ["The MIT License", "The GPL License", "GNU License", "N/A"],
 },
 ])
-const questions = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
