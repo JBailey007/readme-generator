@@ -7,8 +7,33 @@ inquirer
 .createPromptModule([
 {
     type: 'input', 
-    questionName: 'name',
+    questionName: 'title',
     message: 'What is the title?',
+    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    type: 'input', 
+    questionName: 'installation',
+    message: 'How do you install your app?',
+    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    type: 'input', 
+    questionName: 'instructions',
+    message: 'What instructions must you follow?',
+    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    type: 'input', 
+    questionName: 'credits',
+    message: 'Do you have any credits?',
+    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
+},
+{
+    type: 'input', 
+    questionName: 'credits',
+    message: 'Do you have any credits?',
+    validate: (value)=>{ if (value){return true} else {return "I need a value to continue"}},
 },
 ])
 const questions = [];
