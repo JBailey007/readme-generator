@@ -1,49 +1,71 @@
-// TODO: Include packages needed for this application
+//Packages required to run this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const MarkDown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
-const questions = () =>
-inquirer.prompt([
+//Array of questions for users to fill out
+const questions = [
 {
     type: 'input', 
-    questionName: 'title',
+    name: 'title',
     message: 'What is the title?',
 },
 {
     type: 'input', 
-    questionName: 'description',
+    name: 'description',
     message: 'Please describe your application.',
 },
 {
     type: 'input', 
-    questionName: 'installation',
+    name: 'installation',
     message: 'How do you install your app?',
 },
 {
     type: 'input', 
-    questionName: 'usage',
+    name: 'usage',
     message: 'How do you use your app?',
 },
 {
     type: 'input', 
-    questionName: 'credits',
+    name: 'credits',
     message: 'Do you have any credits?',
 },
 {
     //list of licenses to choose from
     type: 'list', 
-    questionName: 'License',
+    name: 'license',
     message: 'What license did you use?',
     choices: ["The MIT License", "The GPL License", "GNU License", "N/A"],
 },
-])
+{
+    type: 'input', 
+    name: 'email',
+    message: 'What is your Email',
+},
+{
+    type: 'input', 
+    name: 'github',
+    message:'What is your Github?',
+},
+];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+//This function will initialize the app and will write the README.md file.
+function init() {
+    return inquirer.prompt(questions)
+        .then ((data) => {
+            const mark = MarkDown.generateReadme(data)
+            fs.writeFile('README.md', mark, function (err) {
+                if (err) {
+                    console.log('Could not save file', err)
+                } else {
+                    console.log('Success: new README.md file generated inside the current folder')
+                }
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
 
 // Function call to initialize app
 init();
