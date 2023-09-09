@@ -31,11 +31,16 @@ const questions = [
     message: 'Do you have any credits?',
 },
 {
+    type: 'input', 
+    name: 'tests',
+    message: 'How do you test your app?',
+},
+{
     //list of licenses to choose from
     type: 'list', 
     name: 'license',
     message: 'What license did you use?',
-    choices: ["The MIT License", "The GPL License", "GNU License", "N/A"],
+    choices: ['mit', 'isc', 'gnuplv3'],
 },
 {
     type: 'input', 

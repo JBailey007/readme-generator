@@ -1,5 +1,9 @@
 
-  # TEST  
+  # TESTING  
+
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
   ## Table of Contents:
   * [Installation](#installation)
   * [Description](#description)
@@ -8,25 +12,24 @@
   * [License](#license)
 
   ### Description
-  TEST
+  TESTING
   
   ### Usage:
-  TEST
+  TESTING
 
   ### Installation:
-  undefined
+  TESTING
 
   ### License:
-  This project is licensed under:
-  The MIT License
+  Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
 
   ### Credits:
-  TEST
+  TESTING
 
   ### Tests 
-  undefined
+  TESTING
 
   ### Questions
-  TEST
-  TEST
+  Email: TESTING
+  Github: TESTING
     
