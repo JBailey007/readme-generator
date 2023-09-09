@@ -18,14 +18,15 @@
 
   ### License:
   This project is licensed under:
-  undefined
+  The MIT License
 
-  ### Contributing:
-  undefined
+  ### Credits:
+  TEST
 
   ### Tests 
   undefined
 
   ### Questions
+  TEST
   TEST
     
